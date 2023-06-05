@@ -11,7 +11,7 @@ namespace DesafioFundamentos.Models
 			this.precoInicial = precoInicial;
 			this.precoPorHora = precoPorHora;
 		}
-
+		#region Adicionar Veiculo
 		public void AdicionarVeiculo()
 		{
 			Veiculos veiculo = new Veiculos();
@@ -27,7 +27,9 @@ namespace DesafioFundamentos.Models
 				Console.WriteLine("Este Veiculo já está cadastrado em nosso Sistema");
 			}
 		}
+		#endregion
 
+		#region RemoverVeiculo
 		public void RemoverVeiculo()
 		{
 			Console.WriteLine("Digite a placa do veículo para remover:");
@@ -46,7 +48,9 @@ namespace DesafioFundamentos.Models
 				Console.WriteLine("Desculpe, esse veículo não está estacionado aqui. Confira se digitou a placa corretamente");
 			}
 		}
+		#endregion
 
+		#region ListarVeiculos
 		public void ListarVeiculos()
 		{
 			if (veiculos.Any())
@@ -62,7 +66,9 @@ namespace DesafioFundamentos.Models
 				Console.WriteLine("Não há veículos estacionados.");
 			}
 		}
+		#endregion
 
+		#region VerificarSeVeiculoJáExiste
 		public bool VerificaVeiculoCadastrado(string placaInformada)
 		{
 			Veiculos veiculoResult = veiculos.FirstOrDefault(x => x.Placa == placaInformada.ToUpper());
@@ -72,5 +78,6 @@ namespace DesafioFundamentos.Models
 			}
 			return false;
 		}
+		#endregion
 	}
 }
