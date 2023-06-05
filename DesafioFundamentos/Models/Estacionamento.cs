@@ -26,7 +26,6 @@ namespace DesafioFundamentos.Models
 			{
 				Console.WriteLine("Este Veiculo já está cadastrado em nosso Sistema");
 			}
-
 		}
 
 		public void RemoverVeiculo()
